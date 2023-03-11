@@ -5,3 +5,84 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+html{
+    font-size: 10px;
+    font-weight: 700;
+}
+h1{
+    font-size: 3.6rem;
+    text-transform: uppercase;
+}
+.wrapper{
+    width: 98%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.accordion{
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    color: blue;
+}
+
+.accordion-title{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    font-size: 2rem;
+}
+i{
+    opacity: 0;
+    transition: all 0.1s linear;
+}
+
+.accordion-item__trigger{
+    padding: 10px;
+}
+.accordion-item__content{
+    padding: 10px auto;
+    height: 0;
+    border-top: none;
+    opacity: 0;
+    transition: all 1s linear;
+}
+.accordion-img{
+    display: block;
+    width: 80%;
+    height: 80%;
+    margin: 10px auto;
+    object-fit: fill;
+    border: 10px solid #fff;
+    border-radius: 20px;
+}
+
+.accordion-item__input:checked + label  .accordion-item__content {
+    opacity: 1;
+    height: 100%;
+}
+
+.accordion-item__input:checked + label  i {
+   transform: rotate(45deg);
+}
+
+.accordion-item__input:checked + label  .accordion-title{
+     color: black;
+}
+   
+.accordion:hover{
+    color: black;
+}
+.accordion:hover i {
+    opacity: 1;
+}
+.accordion-item:hover i {
+    transform: rotate(45deg);
+}
+.accordion-title:hover ~ .accordion-item__content , .accordion-item__content:hover{
+    height: 100%;
+    opacity: 1;
+    transition: all 0.5s linear;
+}
