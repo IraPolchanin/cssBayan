@@ -45,6 +45,7 @@ i{
     padding: 0 0.4rem;
 }
 .accordion-item__content{
+    display: block;
     padding: 0.4rem auto;
     height: 0;
     border-top: none;
